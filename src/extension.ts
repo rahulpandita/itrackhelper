@@ -61,8 +61,8 @@ async function executeAsync() {
 				let text = editor.document.getText(viewport[0]);
 				if(text !== prevText) {
 					prevText = text;
-					let filepath = path.join(__dirname,".." ,"snapshots",currentTime.toLocaleTimeString() + `.` +currentTime.getMilliseconds() +".txt");
-					text = editor.document.fileName + "\n" + text;
+					let filepath = path.join(__dirname,".." ,"snapshots",(currentTime.toLocaleTimeString() + `-` +currentTime.getMilliseconds() +".txt").replaceAll(':', '_').replaceAll(' ', '_'));
+					text = editor.document.fileName + ":" + viewport[0].start.line + "\n" + text;
 					fs.writeFileSync(filepath, text);
 					console.log("Created snapshot : " + filepath);
 				} 
