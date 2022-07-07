@@ -62,6 +62,7 @@ async function executeAsync() {
 				if(text !== prevText) {
 					prevText = text;
 					let filepath = path.join(__dirname,".." ,"snapshots",currentTime.toLocaleTimeString() + `.` +currentTime.getMilliseconds() +".txt");
+					text = editor.document.fileName + "\n" + text;
 					fs.writeFileSync(filepath, text);
 					console.log("Created snapshot : " + filepath);
 				} 
