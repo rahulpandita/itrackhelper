@@ -36,5 +36,6 @@ jobs:
           body: "${{ github.event.inputs.description }}"
           target_commitish: "${{ github.ref }}"
           tag_name: "${{ steps.release_name.outputs.release_name }}"
+          tag_name: "${{ steps.release_name.outputs.release_name }}"
           files: |
             itrackhelper-${{ steps.release_name.outputs.release_name }}.vsix
