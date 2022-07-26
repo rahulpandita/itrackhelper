@@ -2,6 +2,10 @@
   "name": "itrackhelper",
   "displayName": "iTrackHelper",
   "description": "Plug-in to help with eye tracking studies in VScode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahulpandita/itrackhelper.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.68.0"
@@ -10,8 +14,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:itrackhelper.helloWorld",
-    "*"
+    "onCommand:itrackhelper.helloWorld"
   ],
   "main": "./dist/extension.js",
   "contributes": {
