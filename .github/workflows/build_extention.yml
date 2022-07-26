@@ -22,7 +22,7 @@ jobs:
         run: |
           npm ci
           npm install vsce -g
-          vsce package --outDir
+          vsce package
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
