@@ -24,7 +24,7 @@ jobs:
           vsce package
       
       - name Release Name
-        id: release-name
+        id: release_name
         run: |
           version=grep -oP '(?<="version": ")[^"]*' package.json
           echo "::set-output name=release-name::$version"
