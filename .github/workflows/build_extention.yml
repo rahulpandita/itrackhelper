@@ -23,7 +23,7 @@ jobs:
           npm install vsce -g
           vsce package
       
-      - name Release Name
+      - name: Release Name
         id: release_name
         run: |
           version=grep -oP '(?<="version": ")[^"]*' package.json
