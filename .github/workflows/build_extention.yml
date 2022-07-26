@@ -27,7 +27,7 @@ jobs:
         id: release_name
         run: |
           version=$(jq -r '.version' package.json)
-          echo "::set-output name=release-name::$version"
+          echo "::set-output name=release_name::$version"
         
       - name: Publish GH Release
         uses: softprops/action-gh-release@v1
