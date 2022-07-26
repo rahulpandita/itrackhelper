@@ -7,8 +7,9 @@ import path = require('path');
 let isActive = false;
 let prevText = "";
 let iTrackerStatusBarItem: vscode.StatusBarItem;
-const iTrackerCommand = 'itrackhelper.helloWorld';
-
+const iTrackerCommand = 'itrackhelper.toggle';
+const iTrackerConfig = vscode.workspace.getConfiguration('itrackhelper');
+const snapshot_location: any = iTrackerConfig.has('snapshot.location') == true ? iTrackerConfig.get('snapshot.location') : '';
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -61,7 +62,7 @@ async function executeAsync() {
 				let text = editor.document.getText(viewport[0]);
 				if(text !== prevText) {
 					prevText = text;
-					let filepath = path.join(__dirname,".." ,"snapshots",(currentTime.toLocaleTimeString() + `-` +currentTime.getMilliseconds() +".txt").replaceAll(':', '-').replaceAll(' ', '-'));
+					let filepath = path.join(snapshot_location,(currentTime.toLocaleTimeString() + `-` +currentTime.getMilliseconds() +".txt").replaceAll(':', '-').replaceAll(' ', '-'));
 					text = editor.document.fileName + ":" + viewport[0].start.line + "\n" + text;
 					fs.writeFileSync(filepath, text);
 					console.log("Created snapshot : " + filepath);

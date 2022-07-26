@@ -14,14 +14,25 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:itrackhelper.helloWorld"
+    "onCommand:itrackhelper.toggle"
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "",
+      "order": 0,
+      "properties": {
+        "itrackhelper.snapshot.location": {
+          "type": "string",
+          "description": "absolute path to the snapshot folder",
+          "default": "${workspaceRoot}/snapshots"
+        }
+      }
+    },
     "commands": [
       {
-        "command": "itrackhelper.helloWorld",
-        "title": "Hello World"
+        "command": "itrackhelper.toggle",
+        "title": "Toggle iTrackHelper"
       }
     ]
   },
