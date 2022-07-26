@@ -21,7 +21,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm ci
-          npm install vsce
+          npm install vsce -g
           vsce package --outDir
       - name: Upload Release
         uses: ncipollo/release-action@v1
