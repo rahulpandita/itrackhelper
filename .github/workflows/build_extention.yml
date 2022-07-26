@@ -18,12 +18,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          npm ci
+          npm install vsce
+          vgsce package --outDir
+      - name: Upload Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "itrackhelper-0.0.1.vsix"
+          token: ${{ secrets.GITHUB_TOKEN }}
