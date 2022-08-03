@@ -67,6 +67,7 @@ async function executeAsync() {
 					fs.writeFileSync(filepath, text);
 					console.log("Created snapshot : " + filepath);
 				} 
+				editor.revealRange(viewport[0], vscode.TextEditorRevealType.AtTop);
 			}
 		
 		});

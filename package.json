@@ -14,7 +14,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:itrackhelper.toggle"
+    "onCommand:itrackhelper.toggle",
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
