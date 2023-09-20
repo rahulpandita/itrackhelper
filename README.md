@@ -1,6 +1,6 @@
 # itrackhelper README
 
-This extension takes a snapshot of the contents of the active editor-window every 100ms and stores them in snapshots folder.  
+This extension takes a snapshot of the contents of the active editor-window every 10ms and stores them in snapshots folder.  // changed the interval from 100ms to 10ms
 
 ## Features
 
@@ -30,6 +30,6 @@ NO support for multiple editor windows
 
 Users appreciate release notes as you update your extension.
 
-### 0.0.1
+### 0.0.2 // incremented the version number
 
-Initial release of itrackHelper
+Changed the snapshot interval from 100ms to 10ms
