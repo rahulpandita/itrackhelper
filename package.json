@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/rahulpandita/itrackhelper.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2", // incremented the version number
   "engines": {
     "vscode": "^1.68.0"
   },
