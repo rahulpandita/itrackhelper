@@ -1,12 +1,12 @@
 {
-  "name": "itrackhelper",
+  "name": "itrackhelper2",
   "displayName": "iTrackHelper",
   "description": "Plug-in to help with eye tracking studies in VScode",
   "repository": {
     "type": "git",
     "url": "https://github.com/rahulpandita/itrackhelper.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2", // changed from 0.0.1 to 0.0.2
   "engines": {
     "vscode": "^1.68.0"
   },

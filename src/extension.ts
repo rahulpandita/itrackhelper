@@ -51,7 +51,7 @@ export function deactivate() {}
 async function executeAsync() {
 	
 	while(isActive) {
-		await new Promise<void>(resolve => setTimeout(()=>resolve(), 100)).then(()=>{
+		await new Promise<void>(resolve => setTimeout(()=>resolve(), 10)).then(()=>{ // changed from 100ms to 10ms
 			// get current time
 			let currentTime = new Date();
 			let editor = vscode.window.activeTextEditor;
@@ -73,5 +73,3 @@ async function executeAsync() {
 		});
 	}
 }
-
-
